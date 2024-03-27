@@ -10,7 +10,7 @@ async function search() {
         username += "#0";
     }
 
-    const response = await fetch("https://api.jsonbin.io/v3/qs/660392622b1b334a633bf5b6");
+    const response = await fetch("https://api.jsonbin.io/v3/qs/6604872b2b1b334a633c6295");
     const responseData = await response.json();
 
     // Extract the record array from the response data
