@@ -1,8 +1,13 @@
 async function search() {
-    const username = document.getElementById("usernameInput").value;
+    let username = document.getElementById("usernameInput").value.trim();
     if (!username) {
         alert("Please enter a username");
         return;
+    }
+
+    // Add #0 to the username if no # is added
+    if (!username.includes("#")) {
+        username += "#0";
     }
 
     const response = await fetch("https://api.jsonbin.io/v3/qs/660392622b1b334a633bf5b6");
@@ -32,5 +37,6 @@ async function search() {
         document.getElementById("result").innerHTML = "No ban record found for the given username.";
     }
 }
+
 
 
